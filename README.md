@@ -20,12 +20,12 @@ This project includes a playable chess board, piece movement, turn-based play, l
 - Responsive board layout
 - Fullscreen-friendly interface
 - Board coordinates (`a-h`, `1-8`)
-## Visualization
+## UI
 
 Here is a preview of the Chess game interface:
 
-<img width="1860" height="890" alt="Chess Game" src="<img width="1907" height="1020" alt="image" src="https://github.com/user-attachments/assets/a6ed96d2-7834-46f4-bd99-1335251125c4" />
-" />
+<img width="1907" height="1020" alt="image" src="https://github.com/user-attachments/assets/a6ed96d2-7834-46f4-bd99-1335251125c4" />
+
 ## Project Structure
 
 ```text
@@ -56,3 +56,29 @@ src/
 ```bash
 javac -d out src/app/*.java src/pieces/*.java
 ```
+
+# RUN
+
+```bash
+java -cp out app.App
+```
+
+# Controls
+
+- Click a piece to select it
+- Click a highlighted square to move it
+- Drag and drop a piece to move it
+- Click outside the board to clear selection
+
+# Chess Rules Implemented
+
+This project supports:
+
+- Standard piece movement
+- Captures
+- Check
+- Checkmate
+- Stalemate
+- Castling
+- En passant
+- Pawn promotion
