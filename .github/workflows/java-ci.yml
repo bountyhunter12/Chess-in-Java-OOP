@@ -1,0 +1,45 @@
+name: Java Chess CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Create output directory
+        run: mkdir -p out
+
+      - name: Compile project
+        run: javac -d out src/app/*.java src/pieces/*.java
+
+      - name: Copy resources
+        run: |
+          mkdir -p out/resources
+          cp src/resources/pieces.png out/resources/pieces.png
+
+      - name: Create runnable JAR
+        run: |
+          jar cfe chess.jar app.App -C out .
+
+      - name: Upload build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: chess-package
+          path: |
+            chess.jar
+            out/
