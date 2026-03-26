@@ -24,7 +24,8 @@ This project includes a playable chess board, piece movement, turn-based play, l
 
 Here is a preview of the Chess game interface:
 
-<img width="1860" height="890" alt="Chess Game Screenshot" src="https://github.com/user-attachments/assets/44053d21-8d94-469e-b18f-c4c94f17fea7" />
+<img width="1860" height="890" alt="Chess Game" src="<img width="1907" height="1020" alt="image" src="https://github.com/user-attachments/assets/a6ed96d2-7834-46f4-bd99-1335251125c4" />
+" />
 ## Project Structure
 
 ```text
@@ -47,7 +48,7 @@ src/
 .github/
   workflows/
     java-ci.yml
-
+```
 ## How to Run Locally
 
 ### Compile
